@@ -157,7 +157,6 @@ public class AddPage : BasePage
     {
         SelectNetWorks.Click();
         var checkBox = GetCheckBoxByIndex(index);
-        Thread.Sleep(100);
         checkBox.Click();
         SelectNetWorks.SendKeys(Keys.Escape);
         return this;
@@ -167,7 +166,6 @@ public class AddPage : BasePage
     {
         SelectGroup.Click();
         var element = GetMatOptionByIndex(index);
-        Thread.Sleep(100);
         element.Click();
         SelectGroup.SendKeys(Keys.Escape);
         return this;
@@ -178,7 +176,6 @@ public class AddPage : BasePage
         var segments = _driver.FindElements(By.XPath(SelectSegmentXPath));
         segments[selectIndex].Click();
         var element = GetMatOptionByText(segmentValue);
-        Thread.Sleep(100);
         element.Click();
         SelectSegment.SendKeys(Keys.Escape);
         return this;
